@@ -27,6 +27,8 @@ npm start
 
 Open http://127.0.0.1:5190/ for the day tour or http://127.0.0.1:5190/night/ for the night game. Run all commands from the repository root; the root build packages both modes together. Rebuild after changing source files. The completed build works without internet access. Fonts, geometry, materials and sound generation are local.
 
+**Health check.** The local `npm start` server answers `GET /healthz` with `{"ok":true}`, so you can confirm the server is up without opening the game, for example with `curl http://127.0.0.1:5190/healthz`. If you set a custom `PORT`, use that port in the health URL too. This endpoint reports only that the local server is running; it is not served by the GitHub Pages site.
+
 On Windows, after the first build you can also double-click **Start-GBU-Campus.cmd**. It uses the existing Codex Node runtime when available, otherwise Node from PATH, and opens the game.
 
 **5190 is the default local port.** Both `npm start` and the Windows launcher respect the `PORT` environment variable. To choose another port, set it before starting. For example, in PowerShell:
