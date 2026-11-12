@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node tools/build.mjs",
     "start": "node server.mjs",
-    "verify": "node tools/verify-campus.mjs"
+    "verify": "node tools/verify-campus.mjs",
+    "check": "node check-health.mjs"
   },
   "engines": { "node": ">=22.12" },
   "dependencies": {},
